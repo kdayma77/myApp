@@ -1,0 +1,22 @@
+<div class="row padding-20px">
+    <p-table [value]="users">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Email</th>
+                <th>Date Of Birth</th>
+                <th>Actions</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-product let-rowIndex="rowIndex">
+            <tr>
+                <td>{{product.firtname}}</td>
+                <td>{{product.lastname}}</td>
+                <td>{{product.email}}</td>
+                <td>{{product.createdDate}}</td>
+                <td><p-button label="Delete" *ngIf="product.email" (click)="Delete(rowIndex)"></p-button></td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

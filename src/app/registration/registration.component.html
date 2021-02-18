@@ -1,0 +1,40 @@
+<div class="userbackground">
+<div class="p-field content-alignment">
+    <label for="firstname" class="padding-10px">Firstname</label><br>
+    <input id="firstname" type="firstname"  pInputText [(ngModel)]="firstName" /><br>
+    <small *ngIf="showError" id="username2-help" class="p-error ng-invalid ng-dirty">{{message}}</small>
+</div>
+<div class="p-field content-alignment">
+    <label for="lastname"class="padding-10px">Lastname</label><br>
+    <input id="lastname" type="lastname"  pInputText [(ngModel)]="lastName" /><br>
+    <small *ngIf="showErrorForLastname" id="username2-help" class="p-error ng-invalid ng-dirty">{{message}}</small>
+</div>
+<div class="p-field content-alignment ">
+    <label for="email" class=" padding-10px">Email</label><br>
+    <input id="email" type="email"  pInputText [(ngModel)]="email" /><br>
+    <small *ngIf="showErrorForEmail" id="username2-help" class="p-error ng-invalid ng-dirty">{{message}}</small>
+</div>
+<div class="p-field content-alignment ">
+    <label for="password" class=" padding-10px">Password</label><br>
+    <input id="password" type="password"  pInputText [(ngModel)]="password" /><br>
+    <small *ngIf="showErrorForPassword" id="username2-help" class="p-error ng-invalid ng-dirty">{{message}}</small>
+</div>
+<div class="p-field content-alignment ">
+    <label for="cpassword" class=" padding-10px">Confirm Password</label><br>
+    <input id="cpassword" type="password"  pInputText [(ngModel)]="confirmPassword" /><br>
+    <small *ngIf="showErrorForPassword" id="username2-help" class="p-error ng-invalid ng-dirty">{{message}}</small>
+</div>
+<div class="row content-alignment ">
+    <label for="lastname" class=" padding-10px">Select gender</label><br>
+<p-dropdown [options]="genderOptions" [(ngModel)]="genderValue" placeholder="Select Gender" optionLabel="name" [showClear]="true"></p-dropdown>
+</div>
+<div class="p-field p-col-12 p-md-4 content-alignment ">
+    <label for="icon " class=" padding-10px">Select Birth Date</label><br>
+    <p-calendar [(ngModel)]="dateValue" [readonlyInput]="true" [showIcon]="true" inputId="icon"></p-calendar><br>
+    <small *ngIf="showErrorForDate" id="username2-help" class="p-error ng-invalid ng-dirty">{{message}}</small>
+</div>
+<div class="row submit-button-aligment content-alignment"> 
+    <p-button label="submit" (click)="onSubmit()"></p-button>
+</div>
+</div>
+
