@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import {ButtonModule} from 'primeng/button';
-import { RegistrationComponent } from './registration/registration.component';
 import {InputTextModule} from 'primeng/inputtext';
 import {DropdownModule} from 'primeng/dropdown';
 import { FormsModule } from '@angular/forms';
@@ -17,7 +16,6 @@ import {TableModule} from 'primeng/table';
 @NgModule({
   declarations: [
     AppComponent,
-    RegistrationComponent,
     UserDetailsComponent
   ],
   imports: [

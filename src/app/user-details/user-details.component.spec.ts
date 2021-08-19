@@ -35,14 +35,4 @@ describe('UserDetailsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-  it('Delete to be called', () => {
-    component.users = [{
-      firtname: "krishna",
-      lastname: "dayma",
-      email: "",
-      createdDate: ""
-  }]
-    component.Delete(0);
-    expect(component.users.length).toEqual(0);
-  });
 });
