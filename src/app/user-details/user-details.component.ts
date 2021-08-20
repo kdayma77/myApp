@@ -42,7 +42,14 @@ export class UserDetailsComponent implements OnInit {
     });
     // we can use searchvalue to show search result
   }
-
+  // logic for sort but it not used as primeng have default support for sort
+  sortUser?(data) {
+    data.sort(function (a, b) {
+      let ajoindate = a['joining_date'].split('/');
+      let bjoindate = b['joining_date'].split('/');
+      return a.name.localeCompare(b.name) || parseInt(bjoindate[2]) - parseInt(ajoindate[2]);
+  })
+  }
   filterCandidateData() {
     this.filterData = true;
     let currentYear = new Date();
